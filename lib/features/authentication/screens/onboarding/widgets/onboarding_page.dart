@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:getx/utils/constants/sizes.dart';
 import 'package:getx/utils/helpers/device_helpers.dart';
 import 'package:lottie/lottie.dart';
 

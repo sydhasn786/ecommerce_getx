@@ -3,8 +3,8 @@ import 'package:getx/features/authentication/controllers/onboarding/onboarding_c
 import 'package:getx/utils/helpers/device_helpers.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-class OnBoardingDotNavigation extends StatelessWidget {
-  const OnBoardingDotNavigation({super.key});
+class onBoardingDotNavigation extends StatelessWidget {
+  const onBoardingDotNavigation({super.key});
 
   @override
   Widget build(BuildContext context) {

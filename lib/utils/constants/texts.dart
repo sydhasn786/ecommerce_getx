@@ -27,6 +27,7 @@ class UTexts {
   static const String orSignInWith = 'Or Sign In With';
 
   // SignUp Screen
+    static const String signUp = 'Sign Up';
   static const String signupTitle = 'Let’s Get You Registered';
   static const String firstName = 'First Name';
   static const String lastName = 'Last Name';

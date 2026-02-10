@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx/common/widgets/button/elevated_button.dart';
 import 'package:getx/features/authentication/controllers/onboarding/onboarding_controller.dart';
 import 'package:getx/features/authentication/screens/onboarding/widgets/onBoardingDotNavigation.dart';
 import 'package:getx/features/authentication/screens/onboarding/widgets/onBoardingNextButton.dart';
@@ -9,9 +8,6 @@ import 'package:getx/features/authentication/screens/onboarding/widgets/onboardi
 import 'package:getx/utils/constants/images.dart';
 import 'package:getx/utils/constants/sizes.dart';
 import 'package:getx/utils/constants/texts.dart';
-import 'package:getx/utils/helpers/device_helpers.dart';
-import 'package:lottie/lottie.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({super.key});
@@ -46,7 +42,7 @@ class OnBoardingScreen extends StatelessWidget {
               ],
             ),
 
-            OnBoardingDotNavigation(),
+            onBoardingDotNavigation(),
 
             // Next Button
             OnBoardingNextButton(),
