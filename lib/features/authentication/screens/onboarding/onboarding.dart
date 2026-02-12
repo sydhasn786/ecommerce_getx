@@ -35,7 +35,7 @@ class OnBoardingScreen extends StatelessWidget {
                   subTitle: UTexts.onBoardingSubTitle2,
                 ),
                 OnBoardingPage(
-                  animation: UImages.onboarding3Animation,
+                  animation: UImages.onboarding2Animation,
                   title: UTexts.onBoardingTitle3,
                   subTitle: UTexts.onBoardingSubTitle3,
                 ),

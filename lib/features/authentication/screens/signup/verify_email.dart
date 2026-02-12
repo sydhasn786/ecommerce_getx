@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/common/screens/success_screen.dart';
 import 'package:getx/common/style/padding.dart';
 import 'package:getx/common/widgets/button/elevated_button.dart';
 import 'package:getx/features/authentication/screens/login/login.dart';
+import 'package:getx/navigation_menu.dart';
 import 'package:getx/utils/constants/images.dart';
 import 'package:getx/utils/constants/sizes.dart';
 import 'package:getx/utils/constants/texts.dart';
@@ -53,7 +55,19 @@ class VerifyEmailScreen extends StatelessWidget {
               ),
               SizedBox(height: USizes.spaceBtwSections),
 
-              UElevatedButton(onPressed: () {}, child: Text(UTexts.done)),
+              UElevatedButton(
+                onPressed: () => Get.to(
+                  () => SuccessScreen(
+                    title: UTexts.accountCreatedTitle,
+                    subTitle: UTexts.accountCreatedSubTitle,
+                    image: UImages.accountCreatedImage,
+                    onTap: () {
+                      Get.to(() => BottomNavigationMenu());
+                    },
+                  ),
+                ),
+                child: Text(UTexts.done),
+              ),
               SizedBox(height: USizes.spaceBtwItems),
               SizedBox(
                 width: double.infinity,
