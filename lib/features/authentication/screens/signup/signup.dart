@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:getx/common/style/padding.dart';
-import 'package:getx/common/widgets/button/elevated_button.dart';
-import 'package:getx/common/widgets/button/login_buttons.dart';
-import 'package:getx/features/authentication/screens/login/widgets/login_divider.dart';
 import 'package:getx/features/authentication/screens/signup/widgets/signup_form.dart';
-import 'package:getx/utils/constants/colors.dart';
 import 'package:getx/utils/constants/sizes.dart';
 import 'package:getx/utils/constants/texts.dart';
-import 'package:iconsax/iconsax.dart';
 
 class SignupScreen extends StatelessWidget {
   const SignupScreen({super.key});

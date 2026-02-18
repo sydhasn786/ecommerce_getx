@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:getx/utils/constants/colors.dart';
-import 'package:getx/utils/helpers/device_helpers.dart';
 
 class UCircularContainer extends StatelessWidget {
   const UCircularContainer({super.key,
