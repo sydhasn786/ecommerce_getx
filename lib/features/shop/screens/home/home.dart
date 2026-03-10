@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:getx/common/widgets/appbar/appbar.dart';
 import 'package:getx/common/widgets/custom_shapes/circular_container.dart';
@@ -17,27 +18,48 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //appBar: UAppBar(),
-      body: Stack(
+      body: Column(
         children: [
-          SizedBox(height: USizes.homePrimaryHeaderHeight + 1),
+          //upper part
+          Stack(
+            children: [
+              SizedBox(height: USizes.homePrimaryHeaderHeight + 1),
+          
+              UPrimaryHeaderContainer(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    // ctrl + alt + L to format code
+                    UHomeAppBar(),
+          
+                    SizedBox(height: USizes.spaceBtwSections),
+                    // home categories
+                    UHomeCategories(),
+                   
+                  ],
+                ),
+              ),
+          
+              //USearchBar()
+              USearchBar(),
+            ],
+          ),
+          // lower part
+          //banners
+          CarouselSlider(
+            items: [
 
-          UPrimaryHeaderContainer(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                // ctrl + alt + L to format code
-                UHomeAppBar(),
-
-                SizedBox(height: USizes.spaceBtwSections),
-                // home categories
-                UHomeCategories(),
-               
-              ],
+            ],
+            options: CarouselOptions(
+              height: 150,
+              autoPlay: true,
+              enlargeCenterPage: true,
             ),
           ),
+        
 
-          //USearchBar()
-          USearchBar(),
+
+
         ],
       ),
     );
