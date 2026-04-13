@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx/features/authentication/controllers/onboarding/onboarding_controller.dart';
-import 'package:getx/features/authentication/screens/onboarding/widgets/onBoardingDotNavigation.dart';
-import 'package:getx/features/authentication/screens/onboarding/widgets/onBoardingNextButton.dart';
+import 'package:getx/features/authentication/screens/onboarding/widgets/onboarding_dot_navigation.dart';
+import 'package:getx/features/authentication/screens/onboarding/widgets/onboarding_next_button.dart';
 import 'package:getx/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:getx/features/authentication/screens/onboarding/widgets/onboarding_skip.dart';
 import 'package:getx/utils/constants/images.dart';
@@ -35,14 +35,14 @@ class OnBoardingScreen extends StatelessWidget {
                   subTitle: UTexts.onBoardingSubTitle2,
                 ),
                 OnBoardingPage(
-                  animation: UImages.onboarding2Animation,
+                  animation: UImages.onboarding3Animation,
                   title: UTexts.onBoardingTitle3,
                   subTitle: UTexts.onBoardingSubTitle3,
                 ),
               ],
             ),
 
-            onBoardingDotNavigation(),
+            OnBoardingDotNavigation(),
 
             // Next Button
             OnBoardingNextButton(),

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:getx/common/widgets/custom_shapes/circular_container.dart';
 import 'package:getx/common/widgets/image_text/vertical_image_text.dart';
 import 'package:getx/utils/constants/colors.dart';
 import 'package:getx/utils/constants/images.dart';

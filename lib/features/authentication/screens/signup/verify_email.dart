@@ -62,7 +62,7 @@ class VerifyEmailScreen extends StatelessWidget {
                     subTitle: UTexts.accountCreatedSubTitle,
                     image: UImages.accountCreatedImage,
                     onTap: () {
-                      Get.to(() => BottomNavigationMenu());
+                      Get.offAll(() => NavigationMenu());
                     },
                   ),
                 ),
