@@ -3,9 +3,12 @@ import 'package:getx/common/style/shadow.dart';
 import 'package:getx/common/widgets/custom_shapes/rounded_container.dart';
 import 'package:getx/common/widgets/icons/circular_icon.dart';
 import 'package:getx/common/widgets/images/rounded_images.dart';
+import 'package:getx/common/widgets/texts/brand_title_text.dart';
+import 'package:getx/common/widgets/texts/brand_title_with_verify_icon.dart';
 import 'package:getx/common/widgets/texts/product_price.dart';
 import 'package:getx/common/widgets/texts/product_title_text.dart';
 import 'package:getx/utils/constants/colors.dart';
+import 'package:getx/utils/constants/enums.dart';
 import 'package:getx/utils/constants/images.dart';
 import 'package:getx/utils/constants/sizes.dart';
 import 'package:getx/utils/helpers/helper_functions.dart';
@@ -28,7 +31,6 @@ class UProductCardVertical extends StatelessWidget {
           borderRadius: BorderRadius.circular(USizes.productImageRadius),
         ),
         child: Column(
-           
           children: [
             // upperportion img, off and heart icon
             URoundedContainer(
@@ -57,7 +59,7 @@ class UProductCardVertical extends StatelessWidget {
                       ),
                     ),
                   ),
-        
+
                   // favourite icon button
                   Positioned(
                     right: 0,
@@ -72,7 +74,7 @@ class UProductCardVertical extends StatelessWidget {
                 ],
               ),
             ),
-        
+
             // lower portion with title, price brand
             SizedBox(height: USizes.spaceBtwItems / 2),
             //Details
@@ -86,34 +88,17 @@ class UProductCardVertical extends StatelessWidget {
                     smallSize: false,
                     textAlign: TextAlign.start,
                   ),
-        
+
                   SizedBox(height: USizes.spaceBtwItems / 2),
-        
-                  // product brand
-                  Row(
-                    children: [
-                      Text(
-                        'Bata',
-                        style: Theme.of(context).textTheme.labelMedium,
-                        maxLines: 1,
-                        overflow: TextOverflow.ellipsis,
-                      ),
-                      SizedBox(width: USizes.xs),
-                      Icon(
-                        Iconsax.verify5,
-                        color: UColors.primary,
-                        size: USizes.iconXs,
-                      ),
-                    ],
-                  ),
-        
+                  UBrandTitleWithVerifyIcon(title: "Bata", size: USizes.iconXs),
+
                   // product price and add button
                 ],
               ),
             ),
-        
-             Spacer(),
-             //SizedBox(height: USizes.spaceBtwItems),
+
+            Spacer(),
+            //SizedBox(height: USizes.spaceBtwItems),
             // product detail
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -128,7 +113,7 @@ class UProductCardVertical extends StatelessWidget {
                     lineThrough: true,
                   ),
                 ),
-        
+
                 // Add button
                 Container(
                   width: USizes.iconLg,

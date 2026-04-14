@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
 class USectionHeading extends StatelessWidget {
-  const USectionHeading({super.key, required this.title, required this.buttonTitle, this.onPressed});
+  const USectionHeading({
+    super.key,
+    required this.title,
+    required this.buttonTitle,
+    this.onPressed,
+  });
   final String title, buttonTitle;
   final void Function()? onPressed;
 
@@ -12,7 +17,9 @@ class USectionHeading extends StatelessWidget {
       children: [
         Text(
           title,
-          style: Theme.of(context).textTheme.headlineSmall, maxLines: 1, overflow: TextOverflow.ellipsis,
+          style: Theme.of(context).textTheme.headlineSmall,
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
         ),
         TextButton(onPressed: onPressed, child: Text(buttonTitle)),
       ],
