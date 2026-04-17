@@ -13,7 +13,7 @@ class UAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.showBackArrow = false,
     this.leadingIcon,
     this.actions,
-    this.leadingOnPressed,
+    this.leadingOnPressed, TextStyle? style,
   });
 
   final Widget? title;

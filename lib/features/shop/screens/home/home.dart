@@ -7,7 +7,7 @@ import 'package:getx/common/widgets/texts/section_heading.dart';
 import 'package:getx/features/shop/controllers/home/home_controller.dart';
 import 'package:getx/features/shop/screens/home/widgets/home_appbar.dart';
 import 'package:getx/features/shop/screens/home/widgets/home_categories.dart';
-import 'package:getx/features/shop/screens/home/widgets/primary_header_container.dart';
+import 'package:getx/common/widgets/custom_shapes/primary_header_container.dart';
 import 'package:getx/features/shop/screens/home/widgets/promo_slider.dart';
 import 'package:getx/utils/constants/images.dart';
 import 'package:getx/utils/constants/sizes.dart';

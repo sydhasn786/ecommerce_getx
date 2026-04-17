@@ -29,6 +29,7 @@ class UProductCardVertical extends StatelessWidget {
           borderRadius: BorderRadius.circular(USizes.productImageRadius),
         ),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // upperportion img, off and heart icon
             URoundedContainer(
@@ -38,7 +39,7 @@ class UProductCardVertical extends StatelessWidget {
               child: Stack(
                 children: [
                   // thumbnail
-                  URoundedImage(imageUrl: UImages.productImage1),
+                  Center(child: URoundedImage(imageUrl: UImages.productImage1)),
                   // discount tag
                   Positioned(
                     top: 12.0,
@@ -63,6 +64,8 @@ class UProductCardVertical extends StatelessWidget {
                     right: 0,
                     top: 0,
                     child: UCircularIcon(
+                      icon: null,
+                      onPressed: () {  },
                       child: IconButton(
                         onPressed: () {},
                         icon: Icon(Iconsax.heart5, color: Colors.red),

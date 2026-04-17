@@ -4,7 +4,7 @@ import 'package:getx/utils/constants/sizes.dart';
 class UGridLayout extends StatelessWidget {
   const UGridLayout({
     super.key,
-    this.mainAxisExtent = 283,
+    this.mainAxisExtent = 288,
     required this.itemBuilder,
     required this.itemCount,
   });

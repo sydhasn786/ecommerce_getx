@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:getx/common/widgets/appbar/appbar.dart';
 import 'package:getx/common/widgets/products/cart/cartcounter_icon.dart';
 import 'package:getx/common/widgets/textfields/search_bar.dart';
-import 'package:getx/features/shop/screens/home/widgets/primary_header_container.dart';
+import 'package:getx/common/widgets/custom_shapes/primary_header_container.dart';
 import 'package:getx/utils/constants/sizes.dart';
 
 class UStorePrimaryHeader extends StatelessWidget {

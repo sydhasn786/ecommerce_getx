@@ -7,7 +7,7 @@ class UCircularIcon extends StatelessWidget {
     this.width,
     this.height,
     this.backgroundColor,
-    this.child,
+    this.child, required icon, required Future? Function() onPressed,
   });
 
   final double? width, height;
