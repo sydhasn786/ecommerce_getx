@@ -5,14 +5,13 @@ import 'package:getx/common/widgets/texts/section_heading.dart';
 import 'package:getx/features/shop/screens/store/widgets/category_tab.dart';
 import 'package:getx/features/shop/screens/store/widgets/store_primary_header.dart';
 import 'package:getx/utils/constants/sizes.dart';
-import 'package:getx/utils/helpers/helper_functions.dart';
 
 class StoreScreen extends StatelessWidget {
   const StoreScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final dark = UIHelperFunctions.isDarkMode(context);
+    
     return DefaultTabController(
       length: 5,
       child: Scaffold(

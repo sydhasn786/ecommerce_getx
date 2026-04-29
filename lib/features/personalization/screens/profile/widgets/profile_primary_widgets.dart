@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:getx/common/widgets/custom_shapes/primary_header_container.dart';
-import 'package:getx/common/widgets/images/circular_image.dart';
-import 'package:getx/utils/constants/images.dart';
+import 'package:getx/common/widgets/images/user_profile_logo.dart';
 import 'package:getx/utils/constants/sizes.dart';
 
 class UProfilePrimaryHeader extends StatelessWidget {
@@ -26,11 +25,7 @@ class UProfilePrimaryHeader extends StatelessWidget {
       left: 0,
       right: 0,
       child: Center(
-        child: UCircularImage(
-          image: UImages.profileLogo,
-          height: 120,
-          width: 120,
-        ),
+        child: UserProfileLogo(),
       ),
     ),
     
@@ -39,3 +34,4 @@ class UProfilePrimaryHeader extends StatelessWidget {
       ]);
   }
 }
+

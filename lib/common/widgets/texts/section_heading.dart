@@ -4,11 +4,13 @@ class USectionHeading extends StatelessWidget {
   const USectionHeading({
     super.key,
     required this.title,
-    required this.buttonTitle,
+    this.buttonTitle = 'View all',
     this.onPressed,
+    this.showActionButton = true,
   });
   final String title, buttonTitle;
   final void Function()? onPressed;
+  final bool showActionButton;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +23,7 @@ class USectionHeading extends StatelessWidget {
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),
+        if (showActionButton)
         TextButton(onPressed: onPressed, child: Text(buttonTitle)),
       ],
     );

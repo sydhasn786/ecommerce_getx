@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:getx/utils/constants/colors.dart';
 import 'package:getx/utils/helpers/helper_functions.dart';
+
 class UCircularIcon extends StatelessWidget {
   const UCircularIcon({
     super.key,
     this.width,
     this.height,
     this.backgroundColor,
-    this.child, required icon, required Future? Function() onPressed,
+    this.child,
+    required icon,
+    Future? Function()? onPressed,
   });
 
   final double? width, height;
@@ -22,7 +25,8 @@ class UCircularIcon extends StatelessWidget {
       width: width ?? 40,
       height: height ?? 40,
       decoration: BoxDecoration(
-        color: backgroundColor ??
+        color:
+            backgroundColor ??
             (dark
                 ? UColors.dark.withValues(alpha: 0.9)
                 : UColors.light.withValues(alpha: 0.9)),

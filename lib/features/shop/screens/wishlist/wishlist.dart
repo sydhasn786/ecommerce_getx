@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:getx/common/widgets/appbar/appbar.dart';
 import 'package:getx/common/widgets/icons/circular_icon.dart';
 import 'package:getx/common/widgets/layout/grid_layout.dart';
 import 'package:getx/common/widgets/products/product_cards/product_card_vertical.dart';
-import 'package:getx/features/shop/screens/home/home.dart';
 import 'package:getx/navigation_menu.dart';
 import 'package:getx/utils/constants/sizes.dart';
 import 'package:iconsax/iconsax.dart';
