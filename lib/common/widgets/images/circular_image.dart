@@ -39,11 +39,12 @@ class UCircularImage extends StatelessWidget {
       decoration: BoxDecoration(
         color: backgroundColor ?? (dark ? UColors.dark : UColors.light),
         borderRadius: BorderRadius.circular(100),
-        border: Border.all(color: borderColor, width: borderWidth)),
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(100),
-          child: Image(fit: fit, image: isNetworkImage ? NetworkImage(image) : AssetImage(image) as ImageProvider,
-        ),)
+        border: showBorder ? Border.all(color: borderColor, width: borderWidth) : null,
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(100),
+        child: Image(fit: fit, image: isNetworkImage ? NetworkImage(image) : AssetImage(image) as ImageProvider),
+      ),
     );
   }
 }
