@@ -18,10 +18,10 @@ class UChoiceChip extends StatelessWidget {
   Widget build(BuildContext context) {
     bool isColor = UIHelperFunctions.getColor(text) != null;
     return ChoiceChip(
-      label: isColor ? SizedBox() :Text(text),
+      label: isColor ? SizedBox() : Text(text),
       selected: selected,
       onSelected: onSelected,
-      labelStyle: TextStyle(color: UColors.white),
+      labelStyle: TextStyle(color: selected ? UColors.white : null),
       shape: isColor ? CircleBorder() : null,
       padding: isColor ? EdgeInsets.zero : null,
       labelPadding: isColor ? EdgeInsets.zero : null,

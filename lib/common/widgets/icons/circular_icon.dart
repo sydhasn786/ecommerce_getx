@@ -1,38 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:getx/utils/constants/colors.dart';
+import 'package:getx/utils/constants/sizes.dart';
 import 'package:getx/utils/helpers/helper_functions.dart';
+
 
 class UCircularIcon extends StatelessWidget {
   const UCircularIcon({
     super.key,
-    this.width,
-    this.height,
+    required this.icon,
+    this.size = USizes.iconMd,
     this.backgroundColor,
-    this.child,
-    required icon,
-    Future? Function()? onPressed,
+    this.onPressed,
+    this.height,
+    this.width,
+    this.color,
   });
 
-  final double? width, height;
-  final Color? backgroundColor;
-  final Widget? child;
+  final double? width, height, size;
+  final IconData? icon;
+  final Color? color, backgroundColor;
+  final VoidCallback? onPressed;
 
   @override
   Widget build(BuildContext context) {
     final dark = UIHelperFunctions.isDarkMode(context);
-
     return Container(
-      width: width ?? 40,
-      height: height ?? 40,
+      width: width,
+      height: height,
       decoration: BoxDecoration(
-        color:
-            backgroundColor ??
-            (dark
-                ? UColors.dark.withValues(alpha: 0.9)
-                : UColors.light.withValues(alpha: 0.9)),
-        borderRadius: BorderRadius.circular(100),
-      ),
-      child: child, // ✅ USE CHILD HERE
+          color: (backgroundColor != null)
+              ? backgroundColor
+              : dark
+                  ? UColors.dark.withValues(alpha: 0.9)
+                  : UColors.light.withValues(alpha: 0.9),
+          borderRadius: BorderRadius.circular(1000)),
+      child: IconButton(onPressed: onPressed, icon: Icon(icon, color: color, size: size)),
     );
   }
 }

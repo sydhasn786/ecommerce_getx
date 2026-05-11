@@ -20,14 +20,11 @@ class WishlistScreen extends StatelessWidget {
         ),
         actions: [
           UCircularIcon(
-            icon: null,
-            onPressed: () {},
+            icon: Iconsax.add,
+            color: Colors.black,
 
-            child: IconButton(
-              onPressed: () async =>
-                  NavigationController.instance.selectedIndex.value = 0,
-              icon: Icon(Iconsax.add, color: Colors.black),
-            ),
+            onPressed: () async =>
+                NavigationController.instance.selectedIndex.value = 0,
           ),
         ],
       ),

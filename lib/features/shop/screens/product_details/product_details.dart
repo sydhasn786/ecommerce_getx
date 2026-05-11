@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:getx/common/style/padding.dart';
 import 'package:getx/common/widgets/button/elevated_button.dart';
 import 'package:getx/common/widgets/texts/product_title_text.dart';
 import 'package:getx/common/widgets/texts/section_heading.dart';
+import 'package:getx/features/shop/screens/product_details/widgets/bottom_add_to_cart.dart';
 import 'package:getx/features/shop/screens/product_details/widgets/product_attributes.dart';
 import 'package:getx/features/shop/screens/product_details/widgets/product_meta_data.dart';
 import 'package:getx/features/shop/screens/product_details/widgets/product_thumbnail_and_slider.dart';
@@ -16,36 +18,48 @@ class ProductDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final dark = UIHelperFunctions.isDarkMode(context);
     return Scaffold(
+      bottomNavigationBar: UBottomAddToCart(),
       body: SingleChildScrollView(
         child: Column(
           children: [
             /// ---------- product images carousel ----------
             UProductThumbnailAndSlider(),
+            Padding(
+              padding: UPadding.screenPadding,
+              child: Column(
+                children: [
+                  /// ---------- product details ----------
+                  /// price and title
+                  UProductMetaData(),
 
-            /// ---------- product details ----------
-            /// price and title
-            UProductMetaData(),
+                  // Attributes
+                  UProductAttributes(),
+                  SizedBox(height: USizes.spaceBtwSections),
 
-            // Attributes
-            UProductAttributes(),
-            SizedBox(height: USizes.spaceBtwSections),
+                  /// stock and brands checkout button descriptions
+                  UElevatedButton(onPressed: () {}, child: Text('Checkout')),
+                  SizedBox(height: USizes.spaceBtwSections),
+                  // Description
+                  USectionHeading(
+                    title: 'Description',
+                    showActionButton: false,
+                  ),
+                  SizedBox(height: USizes.spaceBtwItems),
 
-            /// stock and brands checkout button descriptions
-            UElevatedButton(onPressed: () {}, child: Text('Checkout')),
-            SizedBox(height: USizes.spaceBtwSections),
-            // Description
-            USectionHeading(title: 'Description', showActionButton: false),
-            SizedBox(height: USizes.spaceBtwItems),
+                  ReadMoreText(
+                    'data: This is a sample product description. You can add more details about the product here.',
+                    trimMode: TrimMode.Line,
+                    trimLines: 2,
+                    trimExpandedText: 'Less',
+                    trimCollapsedText: 'Show more',
+                    moreStyle: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w800,),
+                    lessStyle: TextStyle(fontSize: 14.0, fontWeight: FontWeight.w800,),
+                  ),
 
-            ReadMoreText(
-              'data: This is a sample product description. You can add more details about the product here.',
-              trimMode: TrimMode.Line,
-              trimLines: 2,
-              trimExpandedText: 'Less',
-              trimCollapsedText: 'Show more',
+                  SizedBox(height: USizes.spaceBtwSections),
+                ],
+              ),
             ),
-
-            SizedBox(height: USizes.spaceBtwSections),
           ],
         ),
       ),

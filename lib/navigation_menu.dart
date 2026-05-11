@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx/features/personalization/screens/profile/profile.dart';
 import 'package:getx/features/shop/screens/store/store.dart';
 import 'package:getx/features/shop/screens/wishlist/wishlist.dart';
 import 'package:getx/utils/constants/colors.dart';
@@ -36,6 +37,8 @@ class NavigationMenu extends StatelessWidget {
             NavigationDestination(icon: Icon(Iconsax.shop), label: 'Store'),
 
             NavigationDestination(icon: Icon(Iconsax.heart5), label: 'Wishlist'),
+
+            NavigationDestination(icon: Icon(Iconsax.user), label: 'Profile'),
           ],
         ),
       ),
@@ -49,5 +52,5 @@ class NavigationController extends GetxController {
   static NavigationController get instance => Get.find();
   RxInt selectedIndex = 0.obs;
 
-  List<Widget> screens = [HomeScreen(), StoreScreen(), WishlistScreen()];
+  List<Widget> screens = [HomeScreen(), StoreScreen(), WishlistScreen(), ProfileScreen()];
 }

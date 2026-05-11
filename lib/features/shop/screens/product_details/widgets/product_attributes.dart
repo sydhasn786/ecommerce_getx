@@ -82,7 +82,7 @@ class UProductAttributes extends StatelessWidget {
                     children: [
                       UChoiceChip(
                         text: 'Red',
-                        selected: false,
+                        selected: true,
                         onSelected: (value) {},
                       ),
                       UChoiceChip(
@@ -113,7 +113,7 @@ class UProductAttributes extends StatelessWidget {
                     children: [
                       UChoiceChip(
                         text: 'Small',
-                        selected: false,
+                        selected: true,
                         onSelected: (value) {},
                       ),
                       UChoiceChip(

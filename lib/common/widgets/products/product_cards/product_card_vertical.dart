@@ -66,12 +66,10 @@ class UProductCardVertical extends StatelessWidget {
                     right: 0,
                     top: 0,
                     child: UCircularIcon(
-                      icon: null,
+                      icon: Iconsax.heart5,
+                      color: Colors.red,
                       onPressed: () {  },
-                      child: IconButton(
-                        onPressed: () {},
-                        icon: Icon(Iconsax.heart5, color: Colors.red),
-                      ),
+                      
                     ),
                   ),
                 ],

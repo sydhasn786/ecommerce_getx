@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:getx/common/widgets/custom_shapes/primary_header_container.dart';
 import 'package:getx/common/widgets/images/circular_image.dart';
 import 'package:getx/common/widgets/texts/section_heading.dart';
+import 'package:getx/features/personalization/screens/address/address.dart';
 import 'package:getx/features/personalization/screens/profile/widgets/profile_primary_widgets.dart';
 import 'package:getx/features/personalization/screens/profile/widgets/setting_menu_tile.dart';
 import 'package:getx/features/personalization/screens/profile/widgets/user_profile_tile.dart';
@@ -40,27 +42,31 @@ class ProfileScreen extends StatelessWidget {
                     icon: Iconsax.safe_home,
                     title: 'My Addresses',
                     subtitle: 'Set Shopping delivery addresses',
+                    onTap: () => Get.to(() => AddressScreen()),
                   ),
                   SettingMenuTile(
                     icon: Iconsax.shopping_cart,
                     title: 'My Cart',
                     subtitle: 'Add, remove products and move to checkout',
+                    onTap: () {},
                   ),
                   SettingMenuTile(
                     icon: Iconsax.bag_tick,
                     title: 'My Orders',
                     subtitle: 'In-Progress and Complete Orders',
+                    onTap: () {},
                   ),
-                  SizedBox(height: USizes.spaceBtwItems,),
+                  SizedBox(height: USizes.spaceBtwItems),
 
                   // logout
                   SizedBox(
                     width: double.infinity,
-                    child: OutlinedButton(onPressed: () {},
+                    child: OutlinedButton(
+                      onPressed: () {},
                       child: Text('Logout'),
                     ),
                   ),
-                  SizedBox(height: USizes.spaceBtwSections)
+                  SizedBox(height: USizes.spaceBtwSections),
                 ],
               ),
             ),
